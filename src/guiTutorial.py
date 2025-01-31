@@ -3,9 +3,9 @@ Currently for testing purposes.
 Upon completion of main.py, use this to store functions for GUI
 '''
 import tkinter as tk
-import os
+from os import getcwd
 
-imageName = "NoSuccess.jpg"
+imageName = "DiscreteMeme.png"
 
 def createWindow():
     root = tk.Tk()
@@ -16,7 +16,10 @@ def createWindow():
     # Text Elements
     tk.Label(root, text="The pain of failure is less than the pain of not trying").pack()
     tk.Label(root, text="- Some wise old dude").pack()
-    image = tk.PhotoImage(file=os.getcwd()+"\\assets\\"+imageName)
+
+    # Image Element
+    # For the file path, get current directory (assume StreakManager fldr), go to assets fldr, and add imageName
+    image = tk.PhotoImage(file=getcwd()+"\\assets\\"+imageName)
     tk.Label(root, image=image).pack()
 
     root.mainloop()
