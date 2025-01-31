@@ -8,3 +8,4 @@ class GUI_Main():
     def __init__(self):
         pass
 
+main = gui.Window()
