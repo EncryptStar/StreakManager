@@ -19,7 +19,7 @@ def createWindow():
 
     # Image Element
     # For the file path, get current directory (assume StreakManager fldr), go to assets fldr, and add imageName
-    image = tk.PhotoImage(file=getcwd()+"\\assets\\"+imageName)
+    image = tk.PhotoImage(file=getcwd()+"\\assets\\"+imageName) # WINDOWS ONLY (address this later)
     tk.Label(root, image=image).pack()
 
     root.mainloop()
